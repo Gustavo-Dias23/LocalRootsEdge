@@ -17,10 +17,8 @@ Nossa plataforma unificada oferece um espaço de interação e aprendizado para 
  * HiveMQ;
 
  ## ⚙ Instruções
- * Abra o simulador Wokwi e carregue o arquivo DHT11-LocalRoots.sim1
- * Coloque a porta desejada no serial port
- * Carregue no arduino uno o arquivo sketch_sep16a.ino.hex
- * Inicie o projeto e abra a serial port
+ * Abra o simulador Wokwi e carregue o arquivo diagram.json e o arquivo sketch.ino
+ * Inicie o projeto
  * Caso não tenha node-red instalado na máquina:
    * Faça a instalação do Node.js
    * Abra o cmd e digite npm install -g --unsafe-perm node-red
@@ -28,9 +26,10 @@ Nossa plataforma unificada oferece um espaço de interação e aprendizado para 
  *  Acesse: http://localhost:1880
  *  Importe o arquivo flows.json no node-red
  *  Configure os nodes para sua preferência de conexões
- *  Abra o https://www.hivemq.com/demos/websocket-client/?
- *  Se inscreva no tópico que configurou no mqtt out do node-red
+ *  Abra o https://www.hivemq.com/demos/websocket-client/
+ *  Se inscreva no tópico que configurou no mqtt in do node-red
  *  Veja as informações do simulador sendo mostradas no HiveMq
+ *  Ou abra a dashboard do node-red e veja as informações lá
   
 
 
