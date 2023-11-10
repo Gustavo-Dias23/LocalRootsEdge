@@ -1,0 +1,199 @@
+[
+    {
+        "id": "4afd9220a4de8391",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e04852ec69e5bdf5",
+        "type": "mqtt in",
+        "z": "4afd9220a4de8391",
+        "name": "",
+        "topic": "fiap/iot/sprint4/geral",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "60d977ddf085c4e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "3c7c7a0be1b17051",
+                "487b6c2b0eb7a47b"
+            ]
+        ]
+    },
+    {
+        "id": "3c7c7a0be1b17051",
+        "type": "change",
+        "z": "4afd9220a4de8391",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "532e63d965e94b7a"
+            ]
+        ]
+    },
+    {
+        "id": "487b6c2b0eb7a47b",
+        "type": "change",
+        "z": "4afd9220a4de8391",
+        "name": "Umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 380,
+        "wires": [
+            [
+                "fa6c097ba086a189"
+            ]
+        ]
+    },
+    {
+        "id": "532e63d965e94b7a",
+        "type": "ui_gauge",
+        "z": "4afd9220a4de8391",
+        "name": "",
+        "group": "3ae627a2acfaefc3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "23",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 890,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fa6c097ba086a189",
+        "type": "ui_gauge",
+        "z": "4afd9220a4de8391",
+        "name": "",
+        "group": "6b7e5d9fb7739caf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "60d977ddf085c4e5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "GusLocalRoots",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3ae627a2acfaefc3",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "3a4dd1ad9434f34b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6b7e5d9fb7739caf",
+        "type": "ui_group",
+        "name": "Umidade",
+        "tab": "3a4dd1ad9434f34b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3a4dd1ad9434f34b",
+        "type": "ui_tab",
+        "name": "Controle temperatura",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
