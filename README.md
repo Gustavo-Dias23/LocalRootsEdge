@@ -35,4 +35,4 @@ Nossa plataforma unificada oferece um espaço de interação e aprendizado para 
 
  ## ⚙ Ver o projeto
  Para ver o projeto entre neste link:
- https://youtu.be/UiV-A6u5h7E?si=zJdEDWLVPbXVHaJg
+ https://youtu.be/ZAnLSahXkT0
